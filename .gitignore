@@ -10,5 +10,5 @@ _site
 .RData
 
 /Gemfile.lock
-/_episodes/*.md
+# /_episodes/*.md
 fig/rmd-*
