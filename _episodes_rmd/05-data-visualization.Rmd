@@ -6,7 +6,7 @@ questions:
 - ""
 - ""
 objectives:
-- ""
+- "This is a test"
 - "Describe the role of data, aesthetics, and geoms in ggplot functions."
 - "Choose the correct aesthetics and alter the geom parameters for a scatter plot, histogram, or box plot."
 - "Layer multiple geometries in a single plot."
