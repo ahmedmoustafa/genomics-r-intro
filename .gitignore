@@ -11,4 +11,4 @@ _site
 
 /Gemfile.lock
 # /_episodes/*.md
-fig/rmd-*
+# fig/rmd-*
