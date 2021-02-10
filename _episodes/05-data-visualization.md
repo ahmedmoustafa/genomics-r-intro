@@ -18,9 +18,8 @@ objectives:
 - List several resources for getting help with ggplot.
 - List several resources for creating informative scientific plots.
 keypoints:
-- **`ggplot2`** is a powerful tool for high-quality plots
-- **`ggplot2`**'s grammar provides flexiability and readability
-- ''
+- ggplot2 is a powerful tool for high-quality plots
+- ggplot2's provides a flexiable and readable grammar to build plots
 source: Rmd
 questions:
 - Why ggplot2?
