@@ -1271,16 +1271,9 @@ variants %>%
 
 
 ~~~
-`summarise()` ungrouping output (override with `.groups` argument)
-~~~
-{: .output}
-
-
-
-~~~
 # A tibble: 3 x 2
   sample_id  `n()`
-  <chr>      <int>
+* <chr>      <int>
 1 SRR2584863    25
 2 SRR2584866   766
 3 SRR2589044    10
@@ -1313,16 +1306,9 @@ variants %>%
 
 
 ~~~
-`summarise()` ungrouping output (override with `.groups` argument)
-~~~
-{: .output}
-
-
-
-~~~
 # A tibble: 3 x 2
   sample_id  `max(DP)`
-  <chr>          <int>
+* <chr>          <int>
 1 SRR2584863        20
 2 SRR2584866        79
 3 SRR2589044        16
