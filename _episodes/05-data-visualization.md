@@ -360,7 +360,8 @@ This plot tells us that the most of frequent `DP` (read depth) for the variants 
 >> 
 >> ~~~
 >> ggplot(data = variants, aes(x = DP, fill = sample_id)) +
->>    geom_density(alpha = 0.5)
+>>    geom_density(alpha = 0.5) +
+>>    theme_bw()
 >> ~~~
 >> {: .language-r}
 >> 
