@@ -18,8 +18,8 @@ objectives:
 - List several resources for getting help with ggplot.
 - List several resources for creating informative scientific plots.
 keypoints:
-- ''
-- ''
+- **`ggplot2`** is a powerful tool for high-quality plots
+- **`ggplot2`**'s grammar provides flexiability and readability
 - ''
 source: Rmd
 questions:
@@ -47,12 +47,11 @@ properties. Therefore, we only need minimal changes if the underlying data chang
 or if we decide to change from a bar plot to a scatter plot. This helps in creating
 publication quality plots with minimal amounts of adjustments and tweaking.
 
-**`ggplot2`** functions like data in the 'long' format, i.e., a column for every dimension,
-and a row for every observation. Well-structured data will save you lots of time
-when making figures with **`ggplot2`**
+**`ggplot2`** functions like data in the 'long' format, i.e., a column for every dimension (variable),
+and a row for every observation. Well-structured data will save you time when making figures with **`ggplot2`**
 
-ggplot graphics are built step by step by adding new elements. Adding layers in
-this fashion allows for extensive flexibility and customization of plots.
+**`ggplot2`** graphics are built step-by-step by adding new elements. Adding layers in
+this fashion allows for extensive flexibility and customization of plots, and more equally important the readability of the code.
 
 To build a ggplot, we will use the following basic template that can be used for different types of plots:
 
@@ -71,7 +70,7 @@ ggplot(data = variants)
 ~~~
 {: .language-r}
 
-- define a mapping (using the aesthetic (`aes`) function), by selecting the variables to be plotted and specifying how to present them in the graph, e.g. as x/y positions or characteristics such as size, shape, color, etc.
+- define a mapping (using the aesthetic (`aes`) function), by selecting the variables to be plotted and specifying how to present them in the graph, e.g. as x and y positions or characteristics such as size, shape, color, etc.
 
 
 ~~~
@@ -88,7 +87,7 @@ ggplot(data = variants, aes(x = POS, y = DP))
       * `geom_line()` for trend lines, time series, etc.
 
 To add a geom to the plot use the `+` operator. Because we have two continuous variables,
-let's use `geom_point()` first:
+let's use `geom_point()` (i.e., a scatter plot) first:
 
 
 ~~~
@@ -154,7 +153,7 @@ ggplot(data = variants, aes(x = POS, y = DP)) +
 <img src="../fig/rmd-05-create-ggplot-object-1.png" title="plot of chunk create-ggplot-object" alt="plot of chunk create-ggplot-object" width="612" style="display: block; margin: auto;" />
 
 Then, we start modifying this plot to extract more information from it. For
-instance, we can add transparency (`alpha`) to avoid overplotting:
+instance, we can add transparency (`alpha`) to avoid over-plotting:
 
 
 ~~~
@@ -234,8 +233,7 @@ ggplot(data = variants, aes(x = POS, y = DP, color = sample_id)) +
 ## Faceting
 
 **`ggplot2`** has a special technique called *faceting* that allows the user to split one
-plot into multiple plots based on a factor included in the dataset. We will use it to split our
-mapping quality plot into three panels, one for each sample.
+plot into multiple plots (panels) based on a factor (variable) included in the dataset. We will use it to split our mapping quality plot into three panels, one for each sample.
 
 
 ~~~
@@ -249,7 +247,7 @@ ggplot(data = variants, aes(x = POS, y = MQ, color = sample_id)) +
 
 <img src="../fig/rmd-05-first-facet-1.png" title="plot of chunk first-facet" alt="plot of chunk first-facet" width="612" style="display: block; margin: auto;" />
 
-This looks ok, but it would be easier to read if the plot facets were stacked vertically rather
+This looks okay, but it would be easier to read if the plot facets were stacked vertically rather
 than horizontally. The `facet_grid`
 geometry allows you to explicitly specify how you want your plots to be
 arranged via formula notation (`rows ~ columns`; a `.` can be used as
