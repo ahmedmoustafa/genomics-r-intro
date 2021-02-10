@@ -336,6 +336,39 @@ ggplot(data = variants, aes(x = INDEL, fill = sample_id)) +
 > {: .solution}
 {: .challenge}
 
+
+## Density
+
+We can create desnity plots using the `geom_density` geom that shows the distribution of of a variable in the dataset. Let's plot the distribution of `DP`
+
+
+~~~
+ggplot(data = variants, aes(x = DP)) +
+  geom_density()
+~~~
+{: .language-r}
+
+<img src="../fig/rmd-05-density-1.png" title="plot of chunk density" alt="plot of chunk density" width="612" style="display: block; margin: auto;" />
+
+This plot tells us that the most of frequent `DP` (read depth) for the variants is about 10 reads.
+
+
+> ## Challenge
+> Use `geom_density` to plot the distribution of `DP` with a different fill for each sample. Use a white background for the plot.
+>
+>> ## Solution
+>> 
+>> ~~~
+>> ggplot(data = variants, aes(x = DP, fill = sample_id)) +
+>>    geom_density(alpha = 0.5)
+>> ~~~
+>> {: .language-r}
+>> 
+>> <img src="../fig/rmd-05-density-challenge-1.png" title="plot of chunk density-challenge" alt="plot of chunk density-challenge" width="612" style="display: block; margin: auto;" />
+> {: .solution}
+{: .challenge}
+
+
 ## **`ggplot2`** themes
 
 In addition to `theme_bw()`, which changes the plot background to white, **`ggplot2`**
